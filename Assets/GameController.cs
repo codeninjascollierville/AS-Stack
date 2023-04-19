@@ -41,8 +41,9 @@ public class GameController : MonoBehaviour
         }
         var time = Mathf.Abs(Time.realtimeSinceStartup % 2f - 1f);
         var pos1 = lastCube.transform.position + Vector3.up * 10f;
-        var pos2 = pos1 + ((Level % 2== 0) ? Vector3.left : Vector3.forward) * 120;
-        var pos3 = lastCube.transform.position + Vector3.up * 9f;
+       var pos2 = pos1 + ((Level % 2== 0) ? Vector3.left : Vector3.forward) * 120;
+         var pos3 = lastCube.transform.position + Vector3.up * 9f;
+       //var pos3 = pos1 + ((Level % 2== 0) ? Vector3.right : Vector3.forward) * 120;
         if(Level % 2 == 0)
         {
             currentCube.transform.position = Vector3.Lerp(pos2, pos3, time);
@@ -86,7 +87,8 @@ void Newblock()
     {
         Done = true;
         text.gameObject.SetActive(true);
-        text.text = "Score: " + 1;
+       text.text = "Score: " + 1;
+        text.text = "Score: " + Level;
         text.text = "Final Score: " + Level;
         StartCoroutine(X());
         return;
