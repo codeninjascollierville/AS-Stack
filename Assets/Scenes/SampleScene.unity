@@ -478,8 +478,9 @@ GameObject:
   - component: {fileID: 1938819859}
   - component: {fileID: 1938819861}
   - component: {fileID: 1938819860}
+  - component: {fileID: 1938819862}
   m_Layer: 5
-  m_Name: Text
+  m_Name: 'Score: '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,6 +546,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938819858}
   m_CullTransparentMesh: 0
+--- !u!114 &1938819862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938819858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccb0b43cf250534fa8ff481186286af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCube: {fileID: 6921346076607708920, guid: 83dc174ba8412e449b5157df839a0d2f,
+    type: 3}
+  lastCube: {fileID: 0}
+  text: {fileID: 1938819860}
+  Level: 0
+  Done: 1
 --- !u!1 &2117108827
 GameObject:
   m_ObjectHideFlags: 0
