@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
 
 void Newblock()
 {
+    
     if(lastCube != null)
     {
         currentCube.transform.position = new Vector3(Mathf.Round(currentCube.transform.position.x),
@@ -84,16 +85,16 @@ void Newblock()
         
     }
 
-                                if (currentCube.transform.localScale.x <= 0f || 
+                            if (currentCube.transform.localScale.x <= 0f || 
     currentCube.transform.localScale.z <= 0f)
     {
-        Done = true;
+   Done = true;
         text.gameObject.SetActive(true);
        //text.text = "Score: " + 1;
        //text.text = "Score: " + Level;
         text.text = "Final Score: " + Level;
         StartCoroutine(X());
-        return;
+      return;
     } 
 
          lastCube = currentCube;
@@ -101,6 +102,8 @@ void Newblock()
          currentCube.name = Level + "";
          currentCube.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.HSVToRGB((Level / 100f) % 1f, 1f, 1f));
          Level++;
+                text.text = "Score: " + 1;
+       text.text = "Score: " + Level;
          Camera.main.transform.position = currentCube.transform.position + new Vector3(100, 100, 100);
          Camera.main.transform.LookAt(currentCube.transform.position);
 
